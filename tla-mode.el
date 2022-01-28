@@ -261,10 +261,16 @@
   "Syntax table for tla-mode"
   )
 
+(defface tla-font-lock-primed-variable-face
+  '((t :inherit font-lock-variable-name-face))
+  "Face name to use for primed variables")
+
 (defvar tla-font-lock-defaults
   `((
      ;; stuff between "
      ("\"\\.\\*\\?" . font-lock-string-face)
+     ;; primed identifiers
+     ("[a-zA-Z_][a-zA-Z0-9_]*'" . 'tla-font-lock-primed-variable-face)
      ;; ; : , ; { } =>  @ $ = are all special elements
      ;;(":\\|,\\|;\\|{\\|}\\|=>\\|@\\|$\\|=" . font-lock-keyword-face)
      ( ,(regexp-opt tla-mode-keywords 'words) . font-lock-keyword-face)
