@@ -239,12 +239,12 @@
   (let ((st (make-syntax-table)))
     (modify-syntax-entry ?_ "w" st) ;; underscore is in word
     ;; open paren is start of two-character comment-start
-    (modify-syntax-entry ?\( ". 1bn" st)
+    (modify-syntax-entry ?\( "(. 1bn" st)
     ;; * is second character of comment-start or 1st char of
     ;; comment-end
     (modify-syntax-entry ?* ". 23" st)
     ;; close paren is end of two-character comment-end
-    (modify-syntax-entry ?\) ". 4bn" st)
+    (modify-syntax-entry ?\) "). 4bn" st)
 
     ;; \* is a comment
     (modify-syntax-entry ?\\ ". 1b" st)
