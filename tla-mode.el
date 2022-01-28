@@ -402,6 +402,23 @@
   )
 
 
+(require 'compile)
+
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(tla "^line \\([1-9][0-9]*\\), col \\([1-9][0-9]*\\).*module \\(.*\\)$" (3 "%s.tla") 1 2))
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(tla_state "^State [1-9][0-9]*: <.* line \\([1-9][0-9]*\\), col \\([1-9][0-9]*\\).*module \\(.*\\)>$" (3 "%s.tla") 1 2))
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(tla_positions "^[0-9][0-9]*\\. Line \\([1-9][0-9]*\\), column \\([1-9][0-9]*\\).*in \\(.*\\)$" (3 "%s.tla") 1 2))
+
+; `::' at line 139, col 67 to line 139, col 68 of module AS does not follow a label.
+(add-to-list 'compilation-error-regexp-alist-alist
+	     '(tla_parse "^.* at line \\([1-9][0-9]*\\), col \\([1-9][0-9]*\\).*of module \\([^ ]*\\)" (3 "%s.tla") 1 2))
+
+(add-to-list 'compilation-error-regexp-alist 'tla)
+(add-to-list 'compilation-error-regexp-alist 'tla_state)
+(add-to-list 'compilation-error-regexp-alist 'tla_positions)
+(add-to-list 'compilation-error-regexp-alist 'tla_parse)
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist
