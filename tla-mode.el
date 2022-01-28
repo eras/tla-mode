@@ -394,7 +394,7 @@
   (subword-mode)
   ;; Debugging args fail with starter kit.
   (add-hook 'after-change-functions 'tla-fixcase-keywords t t)
-  (prettify-symbols-mode)
+  ;(prettify-symbols-mode)
   (when (and tla-template-by-default
 	     (= (point-max) 1))
     (tla-template))
