@@ -48,6 +48,7 @@
     "SUBSET" "UNION"
     "DOMAIN" "EXCEPT"
     "SPEC" "LAMBDA"
+    "ALIAS"
     "THEOREM" "ASSUME" "NEW" "PROVE" "ASSUMPTION" "AXIOM"
     ;; Keywords for proofs
     "PROOF" "OBVIOUS" "OMITTED" "BY" "QED"
