@@ -49,6 +49,7 @@
     "DOMAIN" "EXCEPT"
     "SPEC" "LAMBDA"
     "ALIAS"
+    "INVARIANT"
     "THEOREM" "ASSUME" "NEW" "PROVE" "ASSUMPTION" "AXIOM"
     ;; Keywords for proofs
     "PROOF" "OBVIOUS" "OMITTED" "BY" "QED"
@@ -430,6 +431,8 @@
 ;;;###autoload
 (add-to-list 'auto-mode-alist
 	     '("\\.tla\\'" . tla-mode))
+(add-to-list 'auto-mode-alist
+	     '("\\.cfg\\'" . tla-mode))
 
 (provide 'tla-mode)
 
