@@ -246,9 +246,9 @@
     ;; close paren is end of two-character comment-end
     (modify-syntax-entry ?\) ". 4bn" st)
 
-    ;; /* is a comment
+    ;; \* is a comment
     (modify-syntax-entry ?\\ ". 12b" st)
-    (modify-syntax-entry ?\n "> b" st)
+    (modify-syntax-entry ?\n ">" st)
     ; Return st
     st
     )
