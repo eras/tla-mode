@@ -249,6 +249,11 @@
     ;; \* is a comment
     (modify-syntax-entry ?\\ ". 1b" st)
     (modify-syntax-entry ?\n ">" st)
+
+    ;; << and >> are punctuation
+    (modify-syntax-entry ?< "." st)
+    (modify-syntax-entry ?> "." st)
+
     ; Return st
     st
     )
