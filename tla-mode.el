@@ -247,7 +247,7 @@
     (modify-syntax-entry ?\) ". 4bn" st)
 
     ;; \* is a comment
-    (modify-syntax-entry ?\\ ". 12b" st)
+    (modify-syntax-entry ?\\ ". 1b" st)
     (modify-syntax-entry ?\n ">" st)
     ; Return st
     st
